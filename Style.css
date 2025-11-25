@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+}
+
+header{
+    background-image: url(gta-5-2560x1440-nighttime-purple-sky-kjob2rsay5ix9pm2.jpg) ; height: 200px; width: 2000px;
+}
+
+header img{
+    margin-top: 20px;
+    margin-left: 50px;
+}
