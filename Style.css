@@ -6,7 +6,30 @@ header{
     background-image: url(gta-5-2560x1440-nighttime-purple-sky-kjob2rsay5ix9pm2.jpg) ; height: 200px; width: 2000px;
 }
 
-header img{
+.Logo{
     margin-top: 20px;
     margin-left: 50px;
+}
+
+.GTA{
+    margin-left: 1200px;
+}
+
+nav{
+    background-color: gray;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    gap: 550px;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 18px;
+    gap: 30px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
