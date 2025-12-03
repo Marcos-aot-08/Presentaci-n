@@ -1,15 +1,568 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legendary Motorsport</title>
+    <title>Legendary Motorsport - Vehículos de Lujo</title>
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
     <header>
-        <img class="Logo" src="Legendary_Motorsport_Actual.webp" alt="Legendary Motosport" width="400px" height="150px">
-        <img class="GTA" src="Grand_Theft_Auto_logo_series.svg.png" alt="GTA logo" width="150px" height="100px">
-    <head>
+        <div class="header-container">
+            <div class="logo">
+                <h1>LEGENDARY MOTORSPORT</h1>
+                <p class="tagline">DÉJALOS QUE GOTEEN EN TU RETROVISOR</p>
+            </div>
+            <nav>
+                <a href="#featured">DESTACADOS</a>
+                <a href="#supercars">SUPERDEPORTIVOS</a>
+                <a href="#sports">DEPORTIVOS</a>
+                <a href="#classics">CLÁSICOS</a>
+                <a href="#motorcycles">MOTOCICLETAS</a>
+                <a href="#special">ESPECIALES</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-overlay">
+            <h2>¿Buscas un auto seguro, ecológico y de bajo consumo?</h2>
+            <p>Te equivocaste de sitio web.</p>
+            <h3>¿Quieres que se les caigan los pantalones a tu paso?</h3>
+            <p class="welcome">¡BIENVENIDO! Estás en el lugar adecuado.</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">Vehículos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">350km/h</span>
+                    <span class="stat-label">Velocidad Máxima</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Lujo Puro</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="info-banner">
+        <div class="info-content">
+            <h3>NUEVOS VEHÍCULOS CADA SEMANA</h3>
+            <p>Mantente al día con las últimas actualizaciones y lanzamientos exclusivos</p>
+        </div>
+    </section>
+
+    <section id="featured" class="vehicles-section">
+        <h2 class="section-title">VEHÍCULOS DESTACADOS</h2>
+        <div class="filter-bar">
+            <button class="filter-btn active">TODOS</button>
+            <button class="filter-btn">2 PUERTAS</button>
+            <button class="filter-btn">4 PUERTAS</button>
+            <button class="filter-btn">MOTOCICLETAS</button>
+            <button class="filter-btn">TODOTERRENO</button>
+        </div>
+
+        <div class="vehicles-grid">
+            <div class="vehicle-card featured">
+                <div class="featured-badge">NUEVO</div>
+                <div class="vehicle-image">
+                    <div class="image-placeholder">GROTTI TURISMO</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>GROTTI TURISMO R</h3>
+                    <p class="vehicle-desc">Superdeportivo italiano de alto rendimiento con motor V12 y aerodinámica de competición</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★★★</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$500,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">PEGASSI ZENTORNO</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>PEGASSI ZENTORNO</h3>
+                    <p class="vehicle-desc">Diseño agresivo con tecnología de punta y tracción total para dominar las calles</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★★★</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$725,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">TRUFFADE ADDER</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>TRUFFADE ADDER</h3>
+                    <p class="vehicle-desc">El pináculo del lujo y la velocidad. Motor W16 quad-turbo de 1200 CV</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★★★</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$1,000,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">ÖVERFLÖD ENTITY</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>ÖVERFLÖD ENTITY XF</h3>
+                    <p class="vehicle-desc">Tecnología sueca de vanguardia con sistemas híbridos de alta eficiencia</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★★★</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$795,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">GROTTI CHEETAH</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>GROTTI CHEETAH</h3>
+                    <p class="vehicle-desc">Ícono italiano de las pistas con herencia de carreras legendarias</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★★★</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$650,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">PEGASSI VACCA</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>PEGASSI VACCA</h3>
+                    <p class="vehicle-desc">Lujo accesible sin comprometer estilo ni rendimiento deportivo</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★★☆</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$240,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="supercars" class="vehicles-section dark-section">
+        <h2 class="section-title">SUPERDEPORTIVOS</h2>
+        <p class="section-subtitle">Los vehículos más rápidos y exclusivos del planeta</p>
+
+        <div class="vehicles-grid">
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">PROGEN T20</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>PROGEN T20</h3>
+                    <p class="vehicle-desc">Tecnología híbrida de competición con aerodinámica activa</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★★★</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$2,200,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">PEGASSI OSIRIS</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>PEGASSI OSIRIS</h3>
+                    <p class="vehicle-desc">Diseño futurista con sistemas eléctricos de recuperación de energía</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★★★</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$1,950,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card featured">
+                <div class="featured-badge">POPULAR</div>
+                <div class="vehicle-image">
+                    <div class="image-placeholder">VAPID FMJ</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>VAPID FMJ</h3>
+                    <p class="vehicle-desc">Súper auto americano con estilo agresivo y rendimiento brutal</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★★★</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$1,750,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">ANNIS RE-7B</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>ANNIS RE-7B</h3>
+                    <p class="vehicle-desc">Prototipo de carreras con downforce extremo y manejo quirúrgico</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★★★</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$2,475,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">PROGEN TYRUS</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>PROGEN TYRUS</h3>
+                    <p class="vehicle-desc">Ingeniería británica refinada con rendimiento de Le Mans</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★★★</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$2,550,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">GROTTI X80</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>GROTTI X80 PROTO</h3>
+                    <p class="vehicle-desc">El futuro del automovilismo italiano con tecnología espacial</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★★★</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$2,700,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo-banner">
+        <div class="promo-content">
+            <h2>DESCUENTO ESPECIAL</h2>
+            <p>Síguenos en LifeInvader para obtener un 10% de descuento en tu próxima compra</p>
+            <button class="promo-btn">SÍGUENOS AHORA</button>
+        </div>
+    </section>
+
+    <section id="sports" class="vehicles-section">
+        <h2 class="section-title">DEPORTIVOS</h2>
+        <p class="section-subtitle">Rendimiento emocionante a precios más accesibles</p>
+
+        <div class="vehicles-grid">
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">DEWBAUCHEE MASSACRO</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>DEWBAUCHEE MASSACRO</h3>
+                    <p class="vehicle-desc">Elegancia británica con carácter deportivo y motor V12</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★★☆</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$275,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">BENEFACTOR SURANO</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>BENEFACTOR SURANO</h3>
+                    <p class="vehicle-desc">Convertible alemán con lujo y deportividad en perfecto equilibrio</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★★☆</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$110,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">LAMPADATI FURORE GT</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>LAMPADATI FURORE GT</h3>
+                    <p class="vehicle-desc">Gran turismo italiano con diseño atemporal y exclusivo</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★★☆</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$448,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">OCELOT LYNX</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>OCELOT LYNX</h3>
+                    <p class="vehicle-desc">Deportivo clásico británico reinterpretado para la era moderna</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★★☆</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$1,735,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">HIJAK KHAMELION</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>HIJAK KHAMELION</h3>
+                    <p class="vehicle-desc">Sedán deportivo eléctrico con aceleración instantánea</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 4</span>
+                        <span>Velocidad: ★★★★☆</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$100,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">COIL VOLTIC</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>COIL VOLTIC</h3>
+                    <p class="vehicle-desc">Roadster eléctrico con tecnología de vanguardia americana</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★★☆</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$150,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="classics" class="vehicles-section dark-section">
+        <h2 class="section-title">CLÁSICOS</h2>
+        <p class="section-subtitle">Leyendas atemporales que nunca pasan de moda</p>
+
+        <div class="vehicles-grid">
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">TRUFFADE Z-TYPE</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>TRUFFADE Z-TYPE</h3>
+                    <p class="vehicle-desc">Elegancia francesa de los años 30 restaurada a la perfección</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★☆☆</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$950,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">GROTTI STINGER GT</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>GROTTI STINGER GT</h3>
+                    <p class="vehicle-desc">Deportivo italiano de los 60 con líneas icónicas</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★☆☆</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$875,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <div class="image-placeholder">PEGASSI MONROE</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>PEGASSI MONROE</h3>
+                    <p class="vehicle-desc">Superdeportivo de mediados del siglo XX con pedigree de carreras</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 2</span>
+                        <span>Velocidad: ★★★☆☆</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$490,000</span>
+                        <button class="buy-btn">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2 class="section-title">LO QUE DICEN NUESTROS CLIENTES</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"El Adder cambió mi vida. Ahora todos me respetan en las calles de Los Santos."</p>
+                <span class="client-name">- Michael D.</span>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Compré el Zentorno y nunca he vuelto a perder una carrera. Increíble."</p>
+                <span class="client-name">- Franklin C.</span>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"El servicio es tan exclusivo como los autos. Vale cada dólar."</p>
+                <span class="client-name">- Trevor P.</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>MANTENTE INFORMADO</h2>
+            <p>Suscríbete para recibir notificaciones sobre nuevos lanzamientos y ofertas exclusivas</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Tu email aquí" required>
+                <button type="submit">SUSCRIBIRSE</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <h3>LEGENDARY MOTORSPORT</h3>
+                    <p>Vehículos exóticos para personas exóticas</p>
+                </div>
+                <div class="social-links">
+                    <a href="#">LIFEINVADER</a>
+                    <a href="#">BLEETER</a>
+                    <a href="#">EYEFIND</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>INFORMACIÓN</h4>
+                <div class="footer-links">
+                    <a href="#">Sobre Nosotros</a>
+                    <a href="#">Financiamiento</a>
+                    <a href="#">Garantía</a>
+                    <a href="#">Seguros</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>SOPORTE</h4>
+                <div class="footer-links">
+                    <a href="#">Centro de Ayuda</a>
+                    <a href="#">Preguntas Frecuentes</a>
+                    <a href="#">Contacto</a>
+                    <a href="#">Chat en Vivo</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>LEGAL</h4>
+                <div class="footer-links">
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">Devoluciones</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-disclaimer">
+                <p>© 2024 Legendary Motorsport. Todos los derechos reservados.</p>
+                <p>Si tu patrimonio neto es de menos de ocho cifras, siéntete libre de navegar y fantasear sobre lo que pudo haber sido. No nos hacemos responsables por llantas ponchadas, persecuciones policiales o envidiosos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
 </body>
 </html>

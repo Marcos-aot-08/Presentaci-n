@@ -1,12 +1,663 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: black;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-header{
-    background-image: url(gta-5-2560x1440-nighttime-purple-sky-kjob2rsay5ix9pm2.jpg) ; height: 200px; width: 2000px;
+html {
+    scroll-behavior: smooth;
 }
 
-header img{
-    margin-top: 20px;
-    margin-left: 50px;
+/* Header */
+header {
+    background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+    border-bottom: 2px solid #ff0000;
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.3);
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #ff0000;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    margin-bottom: 0.3rem;
+}
+
+.tagline {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #999;
+    font-weight: 300;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23222" width="1200" height="400"/><text x="50%" y="50%" fill="%23333" font-size="120" text-anchor="middle" dominant-baseline="middle" font-family="Arial Black">SPEED</text></svg>');
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 3px solid #ff0000;
+}
+
+.hero-overlay {
+    max-width: 1000px;
+    padding: 2rem;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #999;
+    margin-bottom: 1.5rem;
+}
+
+.hero h3 {
+    font-size: 1.8rem;
+    color: #ff0000;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+.welcome {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #ff0000;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Info Banner */
+.info-banner {
+    background: linear-gradient(90deg, #1a1a1a 0%, #2a0a0a 50%, #1a1a1a 100%);
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid #ff0000;
+    border-bottom: 1px solid #ff0000;
+}
+
+.info-content h3 {
+    color: #ff0000;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.info-content p {
+    color: #999;
+    font-size: 1rem;
+}
+
+/* Vehicles Section */
+.vehicles-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.dark-section {
+    background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #ff0000;
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+    font-weight: 900;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #999;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+/* Filter Bar */
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    color: #999;
+    border: 1px solid #333;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #ff0000;
+    color: #fff;
+    border-color: #ff0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+/* Vehicles Grid */
+.vehicles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.vehicle-card {
+    background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+    border: 1px solid #222;
+    overflow: hidden;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.vehicle-card.featured {
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index: 10;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+.vehicle-card:hover {
+    border-color: #ff0000;
+    box-shadow: 0 8px 30px rgba(255, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.vehicle-image {
+    height: 200px;
+    background: linear-gradient(135deg, #222 0%, #111 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #ff0000;
+    overflow: hidden;
+}
+
+.image-placeholder {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #333;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 2rem;
+}
+
+.vehicle-info {
+    padding: 1.5rem;
+}
+
+.vehicle-info h3 {
+    font-size: 1.3rem;
+    color: #ff0000;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+
+.vehicle-desc {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.vehicle-stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+.vehicle-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #00ff00;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.buy-btn {
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.buy-btn:hover {
+    background: #cc0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    transform: scale(1.05);
+}
+
+/* Promo Banner */
+.promo-banner {
+    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin: 4rem 0;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+}
+
+.promo-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.promo-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.promo-btn {
+    background: #fff;
+    color: #ff0000;
+    border: 2px solid #fff;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.promo-btn:hover {
+    background: transparent;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Testimonials */
+.testimonials {
+    background: #0d0d0d;
+    padding: 4rem 2rem;
+}
+
+.testimonials-grid {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-left: 3px solid #ff0000;
+    transition: all 0.3s;
+}
+
+.testimonial-card:hover {
+    background: #222;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
+}
+
+.stars {
+    color: #ff0000;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card p {
+    color: #ccc;
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.client-name {
+    color: #999;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Newsletter */
+.newsletter {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-top: 2px solid #ff0000;
+}
+
+.newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter h2 {
+    color: #ff0000;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.newsletter p {
+    color: #999;
+    margin-bottom: 2rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.newsletter-form input {
+    flex: 1;
+    min-width: 250px;
+    padding: 1rem;
+    background: #222;
+    border: 1px solid #333;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-color: #ff0000;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.newsletter-form button {
+    padding: 1rem 2rem;
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.newsletter-form button:hover {
+    background: #cc0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    background: #000;
+    border-top: 2px solid #ff0000;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    color: #ff0000;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.footer-logo h3 {
+    color: #ff0000;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.footer-logo p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-links a,
+.social-links a {
+    color: #999;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover,
+.social-links a:hover {
+    color: #ff0000;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-disclaimer {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer-disclaimer p {
+    color: #555;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-disclaimer p:last-child {
+    font-style: italic;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #ff0000;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+    z-index: 999;
+}
+
+.back-to-top:hover {
+    background: #cc0000;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(255, 0, 0, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    nav {
+        gap: 0.8rem;
+    }
+    
+    nav a {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero h3 {
+        font-size: 1.3rem;
+    }
+    
+    .hero-stats {
+        gap: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .vehicles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .promo-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        min-width: 100%;
+    }
 }
