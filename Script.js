@@ -1,18 +1,18 @@
-// Inicializar el saldo bancario
+
 let bankBalance = 10000000;
 
-// Función para formatear números con comas y símbolo de dólar
+
 function formatMoney(amount) {
     return '$' + amount.toLocaleString('en-US');
 }
 
-// Actualizar el display del balance bancario
+
 function updateBankDisplay() {
     const bankAmountElement = document.getElementById('bankAmount');
     if (bankAmountElement) {
         bankAmountElement.textContent = formatMoney(bankBalance);
         
-        // Animación de actualización
+
         bankAmountElement.style.transition = 'transform 0.2s';
         bankAmountElement.style.transform = 'scale(1.1)';
         setTimeout(() => {
@@ -21,48 +21,112 @@ function updateBankDisplay() {
     }
 }
 
-// Función para manejar la compra de vehículos
+
 function buyVehicle(button) {
     const price = parseInt(button.getAttribute('data-price'));
     const vehicleName = button.closest('.vehicle-card').querySelector('h3').textContent;
     
-    // Verificar si hay suficiente dinero
+
     if (bankBalance >= price) {
-        // Restar el precio del balance
+
         bankBalance -= price;
         
-        // Actualizar el display
+
         updateBankDisplay();
         
-        // Cambiar el botón a "COMPRADO"
+
         button.textContent = 'COMPRADO';
         button.style.background = '#00ff00';
         button.style.color = '#000';
         button.disabled = true;
         
-        // Mostrar mensaje de éxito
+
         alert(`¡Felicidades! Has comprado el ${vehicleName} por ${formatMoney(price)}\n\nSaldo restante: ${formatMoney(bankBalance)}`);
     } else {
-        // Mostrar mensaje de fondos insuficientes
+
         const deficit = price - bankBalance;
         alert(`Fondos insuficientes.\n\nNecesitas ${formatMoney(deficit)} más para comprar este vehículo.\n\nSaldo actual: ${formatMoney(bankBalance)}\nPrecio del vehículo: ${formatMoney(price)}`);
     }
 }
 
-// Agregar event listeners a todos los botones de compra cuando el DOM esté listo
+function filterVehicles(filterType) {
+    const vehicleCards = document.querySelectorAll('.vehicle-card');
+    const promoBanner = document.querySelector('.promo-banner');
+    const supercarsSection = document.getElementById('supercars');
+    const classicsSection = document.getElementById('classics');
+    
+    vehicleCards.forEach(card => {
+        const capacityText = card.querySelector('.vehicle-stats span').textContent;
+        const capacity = capacityText.match(/\d+/)[0];
+        
+        if (filterType === 'TODOS') {
+            card.style.display = 'block';
+        } else if (filterType === '2 PUERTAS' && capacity === '2') {
+            card.style.display = 'block';
+        } else if (filterType === '4 PUERTAS' && capacity === '4') {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+    
+    if (filterType === '2 PUERTAS' || filterType === '4 PUERTAS') {
+        if (promoBanner) {
+            promoBanner.style.display = 'none';
+        }
+    } else {
+        if (promoBanner) {
+            promoBanner.style.display = 'block';
+        }
+    }
+    
+    if (filterType === '4 PUERTAS') {
+        if (supercarsSection) {
+            supercarsSection.style.display = 'none';
+        }
+        if (classicsSection) {
+            classicsSection.style.display = 'none';
+        }
+    } else {
+        if (supercarsSection) {
+            supercarsSection.style.display = 'block';
+        }
+        if (classicsSection) {
+            classicsSection.style.display = 'block';
+        }
+    }
+}
+
+function setActiveFilterButton(clickedButton) {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(btn => {
+        btn.classList.remove('active');
+    });
+    clickedButton.classList.add('active');
+}
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar el display del balance
+
     updateBankDisplay();
     
-    // Obtener todos los botones de compra
+
     const buyButtons = document.querySelectorAll('.buy-btn');
-    
-    // Agregar event listener a cada botón
+
     buyButtons.forEach(button => {
         button.addEventListener('click', function() {
             buyVehicle(this);
         });
     });
     
-    console.log('Sistema de compra inicializado. Saldo: ' + formatMoney(bankBalance));
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filterType = this.textContent.trim();
+            filterVehicles(filterType);
+            setActiveFilterButton(this);
+        });
+    });
+    
+    console.log('Sistema de compra y filtros inicializado. Saldo: ' + formatMoney(bankBalance));
 });
