@@ -661,3 +661,54 @@ footer {
         min-width: 100%;
     }
 }
+
+/* Estilos para la cuenta bancaria - Agregar al final de Style.css */
+
+.header-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.bank-balance {
+    background: linear-gradient(135deg, #1a4d1a 0%, #0d260d 100%);
+    padding: 1rem 1.5rem;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    text-align: right;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    min-width: 200px;
+}
+
+.bank-label {
+    font-size: 0.75rem;
+    color: #999;
+    letter-spacing: 1px;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+.bank-amount {
+    font-size: 1.5rem;
+    color: #00ff00;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column !important;
+        gap: 1rem;
+    }
+
+    .bank-balance {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -9,18 +9,24 @@
 <body>
     <header>
         <div class="header-container">
-            <div class="logo">
-                <h1>LEGENDARY MOTORSPORT</h1>
-                <p class="tagline">DÉJALOS QUE GOTEEN EN TU RETROVISOR</p>
+            <div class="header-left">
+                <div class="logo">
+                    <h1>LEGENDARY MOTORSPORT</h1>
+                    <p class="tagline">DÉJALOS QUE GOTEEN EN TU RETROVISOR</p>
+                </div>
+                <nav>
+                    <a href="#featured">DESTACADOS</a>
+                    <a href="#supercars">SUPERDEPORTIVOS</a>
+                    <a href="#sports">DEPORTIVOS</a>
+                    <a href="#classics">CLÁSICOS</a>
+                    <a href="#motorcycles">MOTOCICLETAS</a>
+                    <a href="#special">ESPECIALES</a>
+                </nav>
             </div>
-            <nav>
-                <a href="#featured">DESTACADOS</a>
-                <a href="#supercars">SUPERDEPORTIVOS</a>
-                <a href="#sports">DEPORTIVOS</a>
-                <a href="#classics">CLÁSICOS</a>
-                <a href="#motorcycles">MOTOCICLETAS</a>
-                <a href="#special">ESPECIALES</a>
-            </nav>
+            <div class="bank-balance">
+                <div class="bank-label">CUENTA BANCARIA</div>
+                <div class="bank-amount" id="bankAmount">$10,000,000</div>
+            </div>
         </div>
     </header>
 
@@ -79,7 +85,7 @@
                     </div>
                     <div class="vehicle-footer">
                         <span class="price">$1,500,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <button class="buy-btn" data-price="1500000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
@@ -97,7 +103,7 @@
                     </div>
                     <div class="vehicle-footer">
                         <span class="price">$725,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <button class="buy-btn" data-price="725000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
@@ -115,7 +121,7 @@
                     </div>
                     <div class="vehicle-footer">
                         <span class="price">$1,000,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <button class="buy-btn" data-price="1000000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
@@ -133,7 +139,7 @@
                     </div>
                     <div class="vehicle-footer">
                         <span class="price">$895,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <button class="buy-btn" data-price="895000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
@@ -151,7 +157,7 @@
                     </div>
                     <div class="vehicle-footer">
                         <span class="price">$950,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <button class="buy-btn" data-price="950000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
@@ -169,7 +175,7 @@
                     </div>
                     <div class="vehicle-footer">
                         <span class="price">$1,250,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <button class="buy-btn" data-price="1250000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
@@ -194,7 +200,7 @@
                     </div>
                     <div class="vehicle-footer">
                         <span class="price">$2,200,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <button class="buy-btn" data-price="2200000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
@@ -212,7 +218,7 @@
                     </div>
                     <div class="vehicle-footer">
                         <span class="price">$1,950,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <button class="buy-btn" data-price="1950000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
@@ -231,7 +237,7 @@
                     </div>
                     <div class="vehicle-footer">
                         <span class="price">$1,750,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <button class="buy-btn" data-price="1750000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
@@ -249,7 +255,7 @@
                     </div>
                     <div class="vehicle-footer">
                         <span class="price">$2,475,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <button class="buy-btn" data-price="2475000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
@@ -267,7 +273,7 @@
                     </div>
                     <div class="vehicle-footer">
                         <span class="price">$2,550,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <button class="buy-btn" data-price="2550000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
@@ -285,7 +291,7 @@
                     </div>
                     <div class="vehicle-footer">
                         <span class="price">$2,700,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <button class="buy-btn" data-price="2700000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
@@ -318,97 +324,97 @@
                     </div>
                     <div class="vehicle-footer">
                         <span class="price">$975,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <button class="buy-btn" data-price="975000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
 
             <div class="vehicle-card">
                 <div class="vehicle-image">
-                    <img src="SuranoDown-GTAV-front.webp" alt="BENEFACTOR SURANO" width="420px" height="220px">
+                    <img src="Obey-Tailgater.webp" alt="OBEY TAILGATER" width="420px" height="220px">
                 </div>
                 <div class="vehicle-info">
-                    <h3>BENEFACTOR SURANO</h3>
-                    <p class="vehicle-desc">Convertible alemán con lujo y deportividad en perfecto equilibrio</p>
-                    <div class="vehicle-stats">
-                        <span>Capacidad: 2</span>
-                        <span>Velocidad: ★★★★☆</span>
-                    </div>
-                    <div class="vehicle-footer">
-                        <span class="price">$110,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="vehicle-card">
-                <div class="vehicle-image">
-                    <img src="X80_Proto_GTAO_vue_avant.webp" alt="LAMPADATI FURORE GT" width="420px" height="200px">
-                </div>
-                <div class="vehicle-info">
-                    <h3>LAMPADATI FURORE GT</h3>
-                    <p class="vehicle-desc">Gran turismo italiano con diseño atemporal y exclusivo</p>
-                    <div class="vehicle-stats">
-                        <span>Capacidad: 2</span>
-                        <span>Velocidad: ★★★★☆</span>
-                    </div>
-                    <div class="vehicle-footer">
-                        <span class="price">$448,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="vehicle-card">
-                <div class="vehicle-image">
-                    <img src="X80_Proto_GTAO_vue_avant.webp" alt="GROTTI X80 PROTO" width="420px" height="200px">
-                </div>
-                <div class="vehicle-info">
-                    <h3>OCELOT LYNX</h3>
-                    <p class="vehicle-desc">Deportivo clásico británico reinterpretado para la era moderna</p>
-                    <div class="vehicle-stats">
-                        <span>Capacidad: 2</span>
-                        <span>Velocidad: ★★★★☆</span>
-                    </div>
-                    <div class="vehicle-footer">
-                        <span class="price">$1,735,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="vehicle-card">
-                <div class="vehicle-image">
-                    <img src="X80_Proto_GTAO_vue_avant.webp" alt="GROTTI X80 PROTO" width="420px" height="200px">
-                </div>
-                <div class="vehicle-info">
-                    <h3>HIJAK KHAMELION</h3>
-                    <p class="vehicle-desc">Sedán deportivo eléctrico con aceleración instantánea</p>
+                    <h3>OBEY TAILGATER</h3>
+                    <p class="vehicle-desc">Sedán deportivo alemán con elegancia ejecutiva y alma de corredor. Ideal para profesionales con estilo</p>
                     <div class="vehicle-stats">
                         <span>Capacidad: 4</span>
                         <span>Velocidad: ★★★★☆</span>
                     </div>
                     <div class="vehicle-footer">
-                        <span class="price">$100,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <span class="price">$910,000</span>
+                        <button class="buy-btn" data-price="910000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
 
             <div class="vehicle-card">
                 <div class="vehicle-image">
-                    <img src="X80_Proto_GTAO_vue_avant.webp" alt="GROTTI X80 PROTO" width="420px" height="200px">
+                    <img src="Enus-Cognoscenti.webp" alt="ENUS COGNOSCENTI" width="420px" height="200px">
                 </div>
                 <div class="vehicle-info">
-                    <h3>COIL VOLTIC</h3>
-                    <p class="vehicle-desc">Roadster eléctrico con tecnología de vanguardia americana</p>
+                    <h3>ENUS COGNOSCENTI</h3>
+                    <p class="vehicle-desc">Lujo británico de clase mundial con refinamiento supremo. Para quienes exigen lo mejor</p>
                     <div class="vehicle-stats">
-                        <span>Capacidad: 2</span>
+                        <span>Capacidad: 4</span>
+                        <span>Velocidad: ★★★☆☆</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$854,000</span>
+                        <button class="buy-btn" data-price="854000">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <img src="Benefactor-Schafter.webp" alt="BENEFACTOR SCHAFTER" width="420px" height="200px">
+                </div>
+                <div class="vehicle-info">
+                    <h3>BENEFACTOR SCHAFTER</h3>
+                    <p class="vehicle-desc">Sedán alemán de alto rendimiento con tecnología de punta y confort de primera clase</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 4</span>
                         <span>Velocidad: ★★★★☆</span>
                     </div>
                     <div class="vehicle-footer">
-                        <span class="price">$150,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <span class="price">$950,000</span>
+                        <button class="buy-btn" data-price="950000">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <img src="Albany-Alpha.webp" alt="ALBANY ALPHA" width="420px" height="200px">
+                </div>
+                <div class="vehicle-info">
+                    <h3>ALBANY ALPHA</h3>
+                    <p class="vehicle-desc">Sedán deportivo americano con músculo V8 y diseño agresivo. Potencia sin compromisos</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 4</span>
+                        <span>Velocidad: ★★★★☆</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$850,000</span>
+                        <button class="buy-btn" data-price="850000">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <img src="Ocelot-Jackal.webp" alt="OCELOT JACKAL" width="420px" height="200px">
+                </div>
+                <div class="vehicle-info">
+                    <h3>OCELOT JACKAL</h3>
+                    <p class="vehicle-desc">Coupé de lujo de 4 puertas con ingeniería británica refinada y prestaciones deportivas</p>
+                    <div class="vehicle-stats">
+                        <span>Capacidad: 4</span>
+                        <span>Velocidad: ★★★★☆</span>
+                    </div>
+                    <div class="vehicle-footer">
+                        <span class="price">$670,000</span>
+                        <button class="buy-btn" data-price="670000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
@@ -422,7 +428,7 @@
         <div class="vehicles-grid">
             <div class="vehicle-card">
                 <div class="vehicle-image">
-                    <div class="image-placeholder">TRUFFADE Z-TYPE</div>
+                    <img src="Truffade-Z-Type.webp" alt="TRUFFADE Z-TYPE" width="420px" height="200px">
                 </div>
                 <div class="vehicle-info">
                     <h3>TRUFFADE Z-TYPE</h3>
@@ -433,14 +439,14 @@
                     </div>
                     <div class="vehicle-footer">
                         <span class="price">$950,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <button class="buy-btn" data-price="950000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
 
             <div class="vehicle-card">
                 <div class="vehicle-image">
-                    <img src="X80_Proto_GTAO_vue_avant.webp" alt="GROTTI X80 PROTO" width="420px" height="200px">
+                    <img src="Grotti-Stinger-GT.webp" alt="GROTTI STINGER GT" width="420px" height="200px">
                 </div>
                 <div class="vehicle-info">
                     <h3>GROTTI STINGER GT</h3>
@@ -450,15 +456,15 @@
                         <span>Velocidad: ★★★☆☆</span>
                     </div>
                     <div class="vehicle-footer">
-                        <span class="price">$875,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <span class="price">$975,000</span>
+                        <button class="buy-btn" data-price="975000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
 
             <div class="vehicle-card">
                 <div class="vehicle-image">
-                    <img src="X80_Proto_GTAO_vue_avant.webp" alt="GROTTI X80 PROTO" width="420px" height="200px">
+                    <img src="Pegassi-Monroe.webp" alt="PEGASSI MONROE" width="420px" height="200px">
                 </div>
                 <div class="vehicle-info">
                     <h3>PEGASSI MONROE</h3>
@@ -468,8 +474,8 @@
                         <span>Velocidad: ★★★☆☆</span>
                     </div>
                     <div class="vehicle-footer">
-                        <span class="price">$490,000</span>
-                        <button class="buy-btn">COMPRAR AHORA</button>
+                        <span class="price">$1,230,000</span>
+                        <button class="buy-btn" data-price="1230000">COMPRAR AHORA</button>
                     </div>
                 </div>
             </div>
@@ -513,7 +519,7 @@
             <div class="footer-section">
                 <div class="footer-logo">
                     <h3>LEGENDARY MOTORSPORT</h3>
-                    <p>Vehículos exóticos para personas exóticas</p>
+                    <p>Vehículos exóticos para personas exóticos</p>
                 </div>
                 <div class="social-links">
                     <a href="#">LIFEINVADER</a>
@@ -564,5 +570,6 @@
     <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
         ↑
     </div>
+    <script src="Script.js"></script>
 </body>
 </html>
