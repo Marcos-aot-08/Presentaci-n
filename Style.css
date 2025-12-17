@@ -30,6 +30,13 @@ header {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.header-left {
+    flex: 1;
 }
 
 .logo h1 {
@@ -72,10 +79,38 @@ nav a:hover {
     background: rgba(255, 0, 0, 0.1);
 }
 
+/* Bank Balance */
+.bank-balance {
+    background: linear-gradient(135deg, #1a4d1a 0%, #0d260d 100%);
+    padding: 1rem 1.5rem;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    text-align: right;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    min-width: 200px;
+}
+
+.bank-label {
+    font-size: 0.75rem;
+    color: #999;
+    letter-spacing: 1px;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+.bank-amount {
+    font-size: 1.5rem;
+    color: #00ff00;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    display: block;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23222" width="1200" height="400"/><text x="50%" y="50%" fill="%23333" font-size="120" text-anchor="middle" dominant-baseline="middle" font-family="Arial Black">SPEED</text></svg>');
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23222" width="1200" height="400"/><text x="50%" y="50%" fill="%23333" font-size="120" text-anchor="middle" dominant-baseline="middle" font-family="Arial Black">SPEED</text></svg>');
     background-size: cover;
     background-position: center;
     min-height: 500px;
@@ -344,6 +379,148 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+/* Modal de Selección de Color */
+.color-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.color-modal.show {
+    opacity: 1;
+}
+
+.color-modal-content {
+    background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+    border: 2px solid #ff0000;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.color-modal.show .color-modal-content {
+    transform: scale(1);
+}
+
+.color-modal-content h3 {
+    color: #ff0000;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.modal-vehicle-name {
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.modal-price {
+    color: #00ff00;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.color-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.color-option {
+    height: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.color-option::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.color-option:hover::after {
+    opacity: 1;
+}
+
+.color-name {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.color-option:hover .color-name {
+    opacity: 1;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.modal-cancel {
+    background: transparent;
+    color: #999;
+    border: 1px solid #666;
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.modal-cancel:hover {
+    background: #ff0000;
+    color: #fff;
+    border-color: #ff0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
 /* Promo Banner */
 .promo-banner {
     background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
@@ -377,6 +554,8 @@ nav a:hover {
     letter-spacing: 2px;
     cursor: pointer;
     transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .promo-btn:hover {
@@ -606,116 +785,7 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    .logo h1 {
-        font-size: 1.5rem;
-    }
-    
-    nav {
-        gap: 0.8rem;
-    }
-    
-    nav a {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.8rem;
-    }
-    
-    .hero h2 {
-        font-size: 1.5rem;
-    }
-    
-    .hero h3 {
-        font-size: 1.3rem;
-    }
-    
-    .hero-stats {
-        gap: 1.5rem;
-    }
-    
-    .stat-number {
-        font-size: 1.8rem;
-    }
-    
-    .section-title {
-        font-size: 1.8rem;
-    }
-    
-    .vehicles-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .promo-content h2 {
-        font-size: 1.8rem;
-    }
 
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .newsletter-form {
-        flex-direction: column;
-    }
-
-    .newsletter-form input {
-        min-width: 100%;
-    }
-}
-
-/* Estilos para la cuenta bancaria - Agregar al final de Style.css */
-
-.header-container {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-}
-
-.header-left {
-    flex: 1;
-}
-
-.bank-balance {
-    background: linear-gradient(135deg, #1a4d1a 0%, #0d260d 100%);
-    padding: 1rem 1.5rem;
-    border: 2px solid #00ff00;
-    border-radius: 5px;
-    text-align: right;
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
-    min-width: 200px;
-}
-
-.bank-label {
-    font-size: 0.75rem;
-    color: #999;
-    letter-spacing: 1px;
-    margin-bottom: 0.3rem;
-    display: block;
-}
-
-.bank-amount {
-    font-size: 1.5rem;
-    color: #00ff00;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column !important;
-        gap: 1rem;
-    }
-
-    .bank-balance {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* Responsive */
-
-/* Tablets y dispositivos medianos */
 @media (max-width: 1024px) {
     .header-container {
         padding: 0 1.5rem;
@@ -740,7 +810,7 @@ footer {
     }
 }
 
-/* Móviles grandes */
+
 @media (max-width: 768px) {
     body {
         font-size: 14px;
@@ -774,7 +844,7 @@ footer {
         justify-content: center;
         margin-top: 0.8rem;
     }
-    
+
     nav a {
         font-size: 0.7rem;
         padding: 0.4rem 0.6rem;
@@ -794,7 +864,7 @@ footer {
         min-height: 350px;
         padding: 1rem;
     }
-    
+
     .hero h2 {
         font-size: 1.3rem;
     }
@@ -802,7 +872,7 @@ footer {
     .hero p {
         font-size: 1rem;
     }
-    
+
     .hero h3 {
         font-size: 1.2rem;
     }
@@ -810,12 +880,12 @@ footer {
     .welcome {
         font-size: 1.2rem;
     }
-    
+
     .hero-stats {
         gap: 1rem;
         flex-wrap: wrap;
     }
-    
+
     .stat-number {
         font-size: 1.5rem;
     }
@@ -839,7 +909,7 @@ footer {
     .vehicles-section {
         padding: 2rem 1rem;
     }
-    
+
     .section-title {
         font-size: 1.6rem;
         margin-bottom: 0.8rem;
@@ -859,7 +929,7 @@ footer {
         font-size: 0.75rem;
         padding: 0.6rem 1rem;
     }
-    
+
     .vehicles-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -876,6 +946,9 @@ footer {
     .vehicle-image img {
         max-width: 100%;
         height: auto;
+        width: 100% !important;
+        max-height: 180px;
+        object-fit: cover;
     }
 
     .vehicle-info {
@@ -903,6 +976,36 @@ footer {
     .buy-btn {
         font-size: 0.75rem;
         padding: 0.6rem 1rem;
+    }
+
+    .color-modal-content {
+        padding: 1.5rem;
+        width: 95%;
+    }
+
+    .color-modal-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .modal-vehicle-name {
+        font-size: 1rem;
+    }
+
+    .modal-price {
+        font-size: 1.2rem;
+    }
+
+    .color-options {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+
+    .color-option {
+        height: 70px;
+    }
+
+    .color-name {
+        font-size: 0.8rem;
     }
 
     .promo-banner {
@@ -987,7 +1090,7 @@ footer {
     }
 }
 
-/* Móviles pequeños */
+
 @media (max-width: 480px) {
     .logo h1 {
         font-size: 1.2rem;
@@ -996,9 +1099,147 @@ footer {
 
     .tagline {
         font-size: 0.6rem;
+
+        <function_calls><invoke name="artifacts"><parameter name="command">update</parameter><parameter name="id">legendary_motorsport_css_complete</parameter><parameter name="new_str">nav {
+            gap: 0.3rem;
+        }
+
+        nav a {
+            font-size: 0.65rem;
+            padding: 0.35rem 0.5rem;
+        }
+
+        .hero {
+            min-height: 300px;
+        }
+        
+        .hero h2 {
+            font-size: 1.1rem;
+        }
+
+        .hero p {
+            font-size: 0.9rem;
+        }
+
+        .hero h3 {
+            font-size: 1rem;
+        }
+
+        .welcome {
+            font-size: 1rem;
+        }
+
+        .stat-number {
+            font-size: 1.3rem;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+        }
+
+        .vehicle-info h3 {
+            font-size: 1rem;
+        }
+
+        .vehicle-desc {
+            font-size: 0.8rem;
+        }
+
+        .price {
+            font-size: 1.1rem;
+        }
+
+        .buy-btn {
+            font-size: 0.7rem;
+            padding: 0.5rem 0.8rem;
+        }
+
+        .color-modal-content h3 {
+            font-size: 1.2rem;
+        }
+
+        .modal-vehicle-name {
+            font-size: 0.9rem;
+        }
+
+        .modal-price {
+            font-size: 1.1rem;
+        }
+
+        .color-options {
+            gap: 0.6rem;
+        }
+
+        .color-option {
+            height: 60px;
+        }
+
+        .promo-content h2 {
+            font-size: 1.4rem;
+        }
+
+        .promo-content p {
+            font-size: 0.9rem;
+        }
+
+        .promo-btn {
+            padding: 0.7rem 1.2rem;
+            font-size: 0.85rem;
+        }
+
+        .testimonial-card {
+            padding: 1.2rem;
+        }
+
+        .stars {
+            font-size: 1.2rem;
+        }
+
+        .testimonial-card p {
+            font-size: 0.85rem;
+        }
+
+        .newsletter h2 {
+            font-size: 1.3rem;
+        }
+
+        .newsletter p {
+            font-size: 0.85rem;
+        }
+
+        .footer-disclaimer p {
+            font-size: 0.75rem;
+        }
+
+        .back-to-top {
+            width: 40px;
+            height: 40px;
+            bottom: 1rem;
+            right: 1rem;
+            font-size: 1.2rem;
+        }
     }
 
-    nav {
+    @media (max-width: 768px) and (orientation: landscape) {
+        .hero {
+            min-height: 250px;
+        }
+
+        .hero-stats {
+            margin-top: 1rem;
+        }
+
+        .stat-number {
+            font-size: 1.2rem;
+        }
+    }
+
+    </parameter><parameter name="old_str">nav {
         gap: 0.3rem;
     }
 
@@ -1104,6 +1345,7 @@ footer {
 }
 
 /* Ajustes adicionales para imágenes responsive */
+
 @media (max-width: 768px) {
     .vehicle-image img {
         width: 100% !important;
@@ -1114,6 +1356,7 @@ footer {
 }
 
 /* Landscape en móviles */
+
 @media (max-width: 768px) and (orientation: landscape) {
     .hero {
         min-height: 250px;
@@ -1127,3 +1370,5 @@ footer {
         font-size: 1.2rem;
     }
 }
+
+</parameter>
