@@ -25,6 +25,10 @@ function followPage() {
         isFollowing = false;
         btn.textContent = 'SEGUIR AHORA';
         btn.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
+        
+        // Eliminar el descuento del localStorage
+        localStorage.removeItem('lifeInvaderDiscount');
+        localStorage.removeItem('discountActivatedTime');
     }
 }
 
