@@ -1,0 +1,197 @@
+{
+    "colores": {
+        "azul": "#0066ff",
+        "verde": "#00cc44",
+        "amarillo": "#ffcc00",
+        "rojo": "#ff0000",
+        "blanco": "#ffffff",
+        "negro": "#000000"
+    },
+    "vehiculos": [
+        {
+            "nombre": "GROTTI TURISMO R",
+            "imagen": "TurismoR-GTAVee-FrontQuarter.webp",
+            "categoria": "destacados",
+            "precio": 1500000,
+            "capacidad": 2,
+            "velocidad": 5
+        },
+        {
+            "nombre": "PEGASSI ZENTORNO",
+            "imagen": "Zentorno-GTAVee-FrontQuarter.webp",
+            "categoria": "destacados",
+            "precio": 725000,
+            "capacidad": 2,
+            "velocidad": 5
+        },
+        {
+            "nombre": "TRUFFADE ADDER",
+            "imagen": "Trufade-Adder.webp",
+            "categoria": "destacados",
+            "precio": 1000000,
+            "capacidad": 2,
+            "velocidad": 5
+        },
+        {
+            "nombre": "OVERFLOD ENTITY XF",
+            "imagen": "EntityXF-GTAVee-FrontQuarter.webp",
+            "categoria": "destacados",
+            "precio": 895000,
+            "capacidad": 2,
+            "velocidad": 5
+        },
+        {
+            "nombre": "GROTTI CHEETAH",
+            "imagen": "Cheetah-GTAVee-FrontQuarter.webp",
+            "categoria": "destacados",
+            "precio": 950000,
+            "capacidad": 2,
+            "velocidad": 5
+        },
+        {
+            "nombre": "PEGASSI VACCA",
+            "imagen": "Vacca-GTAV-front.png.jpg",
+            "categoria": "destacados",
+            "precio": 1250000,
+            "capacidad": 2,
+            "velocidad": 4
+        },
+        {
+            "nombre": "PROGEN T20",
+            "imagen": "t20 (1).jpg",
+            "categoria": "supercars",
+            "precio": 2200000,
+            "capacidad": 2,
+            "velocidad": 5
+        },
+        {
+            "nombre": "PEGASSI OSIRIS",
+            "imagen": "Pegassi_osiris.jpg",
+            "categoria": "supercars",
+            "precio": 1950000,
+            "capacidad": 2,
+            "velocidad": 5
+        },
+        {
+            "nombre": "VAPID FMJ",
+            "imagen": "FMJ-GTAO-FrontQuarter.webp",
+            "categoria": "supercars",
+            "precio": 1750000,
+            "capacidad": 2,
+            "velocidad": 5
+        },
+        {
+            "nombre": "ANNIS RE-7B",
+            "imagen": "ANNIS_RE-7B.jpg",
+            "categoria": "supercars",
+            "precio": 2475000,
+            "capacidad": 2,
+            "velocidad": 5
+        },
+        {
+            "nombre": "PROGEN TYRUS",
+            "imagen": "Tyrus-GTAOee-FrontQuarter.webp",
+            "categoria": "supercars",
+            "precio": 2550000,
+            "capacidad": 2,
+            "velocidad": 5
+        },
+        {
+            "nombre": "GROTTI X80 PROTO",
+            "imagen": "X80_Proto_GTAO_vue_avant.webp",
+            "categoria": "supercars",
+            "precio": 2700000,
+            "capacidad": 2,
+            "velocidad": 5
+        },
+        {
+            "nombre": "DEWBAUCHEE MASSACRO",
+            "imagen": "Massacro-GTAVe-FrontQuarter.webp",
+            "categoria": "sports",
+            "precio": 975000,
+            "capacidad": 2,
+            "velocidad": 4
+        },
+        {
+            "nombre": "OBEY TAILGATER",
+            "imagen": "Obey-Tailgater.webp",
+            "categoria": "sports",
+            "precio": 910000,
+            "capacidad": 4,
+            "velocidad": 4
+        },
+        {
+            "nombre": "ENUS COGNOSCENTI",
+            "imagen": "Enus-Cognoscenti.webp",
+            "categoria": "sports",
+            "precio": 854000,
+            "capacidad": 4,
+            "velocidad": 3
+        },
+        {
+            "nombre": "BENEFACTOR SCHAFTER",
+            "imagen": "Benefactor-Schafter.webp",
+            "categoria": "sports",
+            "precio": 950000,
+            "capacidad": 4,
+            "velocidad": 4
+        },
+        {
+            "nombre": "ALBANY ALPHA",
+            "imagen": "Albany-Alpha.webp",
+            "categoria": "sports",
+            "precio": 850000,
+            "capacidad": 4,
+            "velocidad": 4
+        },
+        {
+            "nombre": "OCELOT JACKAL",
+            "imagen": "Ocelot-Jackal.webp",
+            "categoria": "sports",
+            "precio": 670000,
+            "capacidad": 4,
+            "velocidad": 4
+        },
+        {
+            "nombre": "TRUFFADE Z-TYPE",
+            "imagen": "Truffade-Z-Type.webp.webp",
+            "categoria": "classics",
+            "precio": 950000,
+            "capacidad": 2,
+            "velocidad": 3
+        },
+        {
+            "nombre": "GROTTI STINGER GT",
+            "imagen": "Grotti-Stinger-GT.webp",
+            "categoria": "classics",
+            "precio": 975000,
+            "capacidad": 2,
+            "velocidad": 3
+        },
+        {
+            "nombre": "PEGASSI MONROE",
+            "imagen": "Pegassi-Monroe.webp",
+            "categoria": "classics",
+            "precio": 1230000,
+            "capacidad": 2,
+            "velocidad": 3
+        }
+    ],
+    "reseñas": [
+        {
+            "nombre": "Michael D.",
+            "calificacion": 5,
+            "comentario": "El Adder cambió mi vida. Ahora todos me respetan en las calles de Los Santos."
+        },
+        {
+            "nombre": "Franklin C.",
+            "calificacion": 5,
+            "comentario": "Compré el Zentorno y nunca he vuelto a perder una carrera. Increíble."
+        },
+        {
+            "nombre": "Trevor P.",
+            "calificacion": 5,
+            "comentario": "El servicio es tan exclusivo como los autos. Vale cada dólar."
+        }
+    ]
+}
